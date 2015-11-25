@@ -1,6 +1,6 @@
 <?php
 
-namespace Moccalotto\Math;
+use Moccalotto\Math\GeoPoint;
 
 require 'vendor/autoload.php';
 
