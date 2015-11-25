@@ -25,6 +25,15 @@ class GeoPoint
         $this->lon = (double)$lon;
     }
 
+    public function lat()
+    {
+        return $this->lat;
+    }
+
+    public function lon()
+    {
+        return $this->lon;
+    }
 
     public function distanceTo(GeoPoint $other)
     {
