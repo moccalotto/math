@@ -64,6 +64,11 @@ class Distance
         return $this->unit;
     }
 
+    public function meters()
+    {
+        return $this->meters;
+    }
+
     public function __toString()
     {
         return sprintf(
