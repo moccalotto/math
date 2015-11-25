@@ -20,5 +20,8 @@
         "psr-4": {
             "Moccalotto\\Math\\": "src"
         }
+    },
+    "archive": {
+        "exclude": ["demo.php"]
     }
 }
