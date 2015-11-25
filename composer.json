@@ -4,8 +4,7 @@
     "description": "Math utility library for PHP",
     "keywords": ["Math", "Geodistance"],
     "require": {
-        "php": ">=5.6.0",
-        "ext-ssh2": "*"
+        "php": ">=5.6.0"
     },
     "minimum-stability": "dev",
     "license": "MIT",
