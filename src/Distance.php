@@ -52,7 +52,7 @@ class Distance
     public function to(LengthUnit $new_unit, Prefix $new_prefix = null)
     {
         if (null === $new_prefix) {
-            $prefix = new NoPrefix();
+            $new_prefix = new NoPrefix();
         }
         return new Distance(
             $new_prefix->prefix($new_unit->fromMeters($this->meters)),
