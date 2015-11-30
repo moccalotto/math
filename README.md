@@ -1,16 +1,12 @@
-
-# math
+# Math
 Math Library
 
 [![Build Status](https://travis-ci.org/moccalotto/math.svg?branch=master)](https://travis-ci.org/moccalotto/math)
 
-Work in progress!
-
-#see demo.php for more info.
 ```php
 <?php
 
-// CALCULATING THE DISTANCE BETWEEN TWO LOCATIONS ON EARTH
+// CALCULATE THE DISTANCE BETWEEN TWO LOCATIONS ON EARTH
 
 use Moccalotto\Math\GeoPoint;
 use Moccalotto\Math\Units;
