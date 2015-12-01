@@ -1,7 +1,27 @@
 # Math
-Math Library
-
 [![Build Status](https://travis-ci.org/moccalotto/math.svg?branch=master)](https://travis-ci.org/moccalotto/math)
+
+Simple math library.
+
+Currently, we can only calculate geo-distances.
+
+## Installation
+
+To add this package as a local, per-project dependency to your project, simply add a dependency on
+ `moccalotto/math` to your project's `composer.json` file like so:
+
+```json
+{
+    "require": {
+        "moccalotto/math": "~0.2"
+    }
+}
+```
+
+Alternatively simply call `composer require moccalotto/math`
+
+
+## Demo
 
 ```php
 <?php
