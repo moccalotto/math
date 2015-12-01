@@ -13,7 +13,7 @@ To add this package as a local, per-project dependency to your project, simply a
 ```json
 {
     "require": {
-        "moccalotto/math": "~0.2"
+        "moccalotto/math": "~0.1"
     }
 }
 ```
