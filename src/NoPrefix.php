@@ -3,14 +3,14 @@
 namespace Moccalotto\Math;
 
 /**
- * No prefix
+ * No prefix.
  *
  * Represents a value without a prefix
  */
 class NoPrefix implements Contracts\Prefix
 {
     /**
-     * Return the factor of the prefix
+     * Return the factor of the prefix.
      */
     public function factor()
     {
@@ -18,7 +18,7 @@ class NoPrefix implements Contracts\Prefix
     }
 
     /**
-     * Return the base-10 exponent of the prefix
+     * Return the base-10 exponent of the prefix.
      */
     public function exponent()
     {
@@ -26,7 +26,7 @@ class NoPrefix implements Contracts\Prefix
     }
 
     /**
-     * Return the short name of the prefix
+     * Return the short name of the prefix.
      *
      * @return string
      */
@@ -36,7 +36,7 @@ class NoPrefix implements Contracts\Prefix
     }
 
     /**
-     * Return the long name of the prefix
+     * Return the long name of the prefix.
      *
      * @return string
      */
@@ -46,8 +46,10 @@ class NoPrefix implements Contracts\Prefix
     }
 
     /**
-     * Turn a prefixed value into its non-prefixed equivalent
+     * Turn a prefixed value into its non-prefixed equivalent.
+     *
      * @param int|float $value
+     *
      * @return int|float
      */
     public function unprefix($value)
@@ -56,8 +58,10 @@ class NoPrefix implements Contracts\Prefix
     }
 
     /**
-     * Turn a nonn-prefixed value into its prefixed equivalent
+     * Turn a nonn-prefixed value into its prefixed equivalent.
+     *
      * @param int|float $value
+     *
      * @return int|float
      */
     public function prefix($value)

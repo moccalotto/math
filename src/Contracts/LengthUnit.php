@@ -11,12 +11,14 @@ interface LengthUnit
 
     /**
      * @param int|float $value
+     *
      * @return int|float
      */
     public function toMeters($value);
 
     /**
      * @param int|float $value
+     *
      * @return int|float
      */
     public function fromMeters($value);
@@ -28,6 +30,7 @@ interface LengthUnit
 
     /**
      * @param bool $plural
+     *
      * @return string
      */
     public function longName();

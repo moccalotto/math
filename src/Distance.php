@@ -4,10 +4,9 @@ namespace Moccalotto\Math;
 
 use Moccalotto\Math\Contracts\LengthUnit;
 use Moccalotto\Math\Contracts\Prefix;
-use LogicException;
 
 /**
- * Class representing a distance
+ * Class representing a distance.
  */
 class Distance
 {
@@ -27,10 +26,11 @@ class Distance
     protected $unit;
 
     /**
-     * Constructor
-     * @param float|int $length
+     * Constructor.
+     *
+     * @param float|int  $length
      * @param LengthUnit $unit
-     * @param Prefix $prefix
+     * @param Prefix     $prefix
      */
     public function __construct($length, LengthUnit $unit, Prefix $prefix = null)
     {
@@ -39,14 +39,15 @@ class Distance
         }
         $this->meters = $prefix->unprefix($unit->toMeters($length));
         $this->prefix = $prefix;
-        $this->unit   = $unit;
+        $this->unit = $unit;
     }
 
     /**
-     * Convert the unit and prefix of the distance
+     * Convert the unit and prefix of the distance.
      *
      * @param LengthUnit $new_unit
-     * @param Prefix $new_unit
+     * @param Prefix     $new_unit
+     *
      * @return Distance the converted distance
      */
     public function to(LengthUnit $new_unit, Prefix $new_prefix = null)
@@ -54,7 +55,8 @@ class Distance
         if (null === $new_prefix) {
             $new_prefix = new NoPrefix();
         }
-        return new Distance(
+
+        return new self(
             $new_prefix->prefix($new_unit->fromMeters($this->meters)),
             $new_unit,
             $new_prefix
@@ -62,18 +64,22 @@ class Distance
     }
 
     /**
-     * Change the unit of the distance
+     * Change the unit of the distance.
+     *
      * @param LengthUnit $new_unit
+     *
      * @return Distance the converted distance
      */
     public function withUnit(LengthUnit $new_unit)
     {
-        return $this->to($new_unit, new NoPrefix);
+        return $this->to($new_unit, new NoPrefix());
     }
 
     /**
-     * Change the unit of the distance
+     * Change the unit of the distance.
+     *
      * @param Prefix $new_prefix
+     *
      * @return Distance the converted distance
      */
     public function withPrefix(Prefix $new_prefix)
@@ -82,7 +88,8 @@ class Distance
     }
 
     /**
-     * Remove the prefix from the distance, converting it to the base number
+     * Remove the prefix from the distance, converting it to the base number.
+     *
      * @return Distance the converted distance
      */
     public function withoutPrefix()
@@ -91,7 +98,8 @@ class Distance
     }
 
     /**
-     * Get the prefix of the distance
+     * Get the prefix of the distance.
+     *
      * @return Prefix
      */
     public function prefix()
@@ -100,7 +108,8 @@ class Distance
     }
 
     /**
-     * Get the unit of the distance
+     * Get the unit of the distance.
+     *
      * @return LengthUnit
      */
     public function unit()
@@ -109,7 +118,8 @@ class Distance
     }
 
     /**
-     * Get the distance in meters
+     * Get the distance in meters.
+     *
      * @return float
      */
     public function meters()

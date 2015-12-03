@@ -33,5 +33,3 @@ class Foot implements LengthUnit
         return $plural ? 'foot' : 'feet';
     }
 }
-
-

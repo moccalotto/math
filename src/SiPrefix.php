@@ -5,7 +5,7 @@ namespace Moccalotto\Math;
 use UnexpectedValueException;
 
 /**
- * SI prefix
+ * SI prefix.
  */
 class SiPrefix implements Contracts\Prefix
 {
@@ -47,7 +47,8 @@ class SiPrefix implements Contracts\Prefix
     ];
 
     /**
-     * Constructor
+     * Constructor.
+     *
      * @param string $name the name (or short name) of the SI unit.
      */
     public function __construct($name)
@@ -55,7 +56,8 @@ class SiPrefix implements Contracts\Prefix
         if (isset(static::$shorthands[$name])) {
             $this->shortName = $name;
             $this->exponent = static::$shorthands[$name][1];
-            $this->name   = static::$shorthands[$name][0];
+            $this->name = static::$shorthands[$name][0];
+
             return;
         }
 
@@ -64,7 +66,8 @@ class SiPrefix implements Contracts\Prefix
             if ($name_lower == $candidate_name) {
                 $this->shortName = $shortName;
                 $this->exponent = $exponent;
-                $this->name   = $candidate_name;
+                $this->name = $candidate_name;
+
                 return;
             }
         }
@@ -75,7 +78,7 @@ class SiPrefix implements Contracts\Prefix
     }
 
     /**
-     * Return the factor of the prefix
+     * Return the factor of the prefix.
      */
     public function factor()
     {
@@ -83,7 +86,7 @@ class SiPrefix implements Contracts\Prefix
     }
 
     /**
-     * Return the base-10 exponent of the prefix
+     * Return the base-10 exponent of the prefix.
      */
     public function exponent()
     {
@@ -91,7 +94,7 @@ class SiPrefix implements Contracts\Prefix
     }
 
     /**
-     * Return the short name of the prefix
+     * Return the short name of the prefix.
      *
      * @return string
      */
@@ -101,7 +104,7 @@ class SiPrefix implements Contracts\Prefix
     }
 
     /**
-     * Return the long name of the prefix
+     * Return the long name of the prefix.
      *
      * @return string
      */
@@ -111,8 +114,10 @@ class SiPrefix implements Contracts\Prefix
     }
 
     /**
-     * Turn a prefixed value into its non-prefixed equivalent
+     * Turn a prefixed value into its non-prefixed equivalent.
+     *
      * @param int|float $value
+     *
      * @return int|float
      */
     public function unprefix($value)
@@ -121,8 +126,10 @@ class SiPrefix implements Contracts\Prefix
     }
 
     /**
-     * Turn a nonn-prefixed value into its prefixed equivalent
+     * Turn a nonn-prefixed value into its prefixed equivalent.
+     *
      * @param int|float $value
+     *
      * @return int|float
      */
     public function prefix($value)
