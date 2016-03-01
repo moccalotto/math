@@ -40,6 +40,6 @@ $p2 = new GeoPoint(57.105725, 10.032659);
 // print the distance (in KM) between the points
 print $p1->distanceTo($p2).PHP_EOL;
 
-// print the distance (in KM) between the points
+// print the distance (in miles) between the points
 print $p1->distanceTo($p2)->to(new Units\Length\Mile).PHP_EOL;
 ```
