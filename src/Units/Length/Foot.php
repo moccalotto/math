@@ -10,7 +10,7 @@ class Foot implements LengthUnit
 
     public function meterFactor()
     {
-        return $this->meterFactor;
+        return $this->factor;
     }
 
     public function toMeters($value)
